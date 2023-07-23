@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+<div class="container" role="main">
+  <section class="py-12">
+    <div class="row pt-3 mx-n2">
+    {{ with .Content }}
+    <div class="well">
+      {{.}}
+    </div>
+    {{ end }}
+
+    {{ range (.Paginator 12).Pages }}
+    {{ partial "album_preview.html" .}}
+    {{end}}
+
+  </div>
+  </section>
+</div>
+
+<div class="container">
+  <div class="row font-sans">
+    <div class="col-md-12 mt-10">
+      <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-end">
+          {{ template "_internal/pagination.html" . }}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+{{ end }}
