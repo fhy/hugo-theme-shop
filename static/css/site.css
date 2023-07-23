@@ -1,0 +1,43 @@
+.album-img-box{
+    width:100%;
+    height:0;
+    padding-bottom:100%;
+    position: relative;
+}
+.album-img-box img{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    object-fit: cover;
+}
+
+.mb-grid-gutter {
+    margin-bottom: 1.875rem !important;
+}
+
+.product-meta {
+    transition: color .25s ease-in-out;
+    color: #7d879c;
+    text-decoration: none !important;
+}
+
+.fs-sm {
+    font-size: 0.875rem !important;
+}
+
+.text-accent {
+    --cz-text-opacity: 1;
+    color: rgba(var(--cz-accent-rgb), var(--cz-text-opacity)) !important;
+}
+
+.card-badge {
+    position: absolute;
+    top: 1.25rem;
+    z-index: 1;
+}
+
+.card-badge-start {
+    left: 0;
+}

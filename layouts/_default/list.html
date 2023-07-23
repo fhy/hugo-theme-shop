@@ -10,7 +10,8 @@
       {{ end }} 
       <div class="row">
         {{ range .Paginator.Pages }}
-          {{ partial "post_preview.html" .}}
+          <!-- {{ partial "post_preview.html" .}} -->
+          {{ partial "album_preview.html" .}}
         {{ end }}
       </div>
     </div>

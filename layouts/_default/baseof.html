@@ -5,6 +5,9 @@
   </head>
   <body>
     {{ partial "nav.html" . }}
+    {{ if ne .Type "shops" }}
+      {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
+    {{ end }}
     {{ block "main" . }}{{ end }}
     {{ partial "footer.html" . }}
     {{ block "footer" . }}{{ end }}
